@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Translated Content</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body class="output-page">
+    <div class="section original">
+      <h1 data-translate="original-content">Original Content</h1>
+      <pre>{{ original }}</pre>
+    </div>
+
+    {% if summarized %}
+    <div class="section summarized">
+      <h1 data-translate="summarized-content">Summarized Content</h1>
+      <pre>{{ summarized }}</pre>
+    </div>
+    {% endif %}
+
+    <div class="section translated">
+      <h1 data-translate="translated-content">Translated Content</h1>
+      <pre>{{ translated }}</pre>
+    </div>
+  </body>
+</html>
